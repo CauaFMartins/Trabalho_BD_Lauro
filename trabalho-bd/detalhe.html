@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carregando Dorama...</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="home.html" class="logo">
+        <img src="img.png" alt="Logo Fansub" />
+      </a>
+      <nav class="nav-links">
+        <a href="home.html">Início</a>
+        <a href="favoritos.html">Favoritos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="apoio.html">Apoie</a>
+        <button onclick="logout()">Sair</button>
+      </nav>
+    </header>
+
+    <!-- NOVO: Wrapper para o layout da página -->
+    <div class="detail-page-layout">
+      <!-- Container principal que será preenchido pelo JavaScript -->
+      <main id="dorama-detail-container">
+        <p>Carregando informações...</p>
+      </main>
+
+      <!-- NOVO: Container da barra de pesquisa -->
+      <aside class="sidebar-search">
+        <div class="search-container">
+          <input
+            type="text"
+            id="doramaSearch"
+            placeholder="Buscar outro dorama..."
+          />
+          <div class="search-results" id="searchResults"></div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Chopuchai Fansub Todos os direitos reservados.</p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

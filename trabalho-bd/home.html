@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo - Chopuchai Fansub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="home.html" class="logo">
+        <img src="img.png" alt="Logo Fansub" />
+      </a>
+      <nav class="nav-links">
+        <a href="home.html">Início</a>
+        <a href="favoritos.html">Favoritos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="apoio.html">Apoie</a>
+        <button onclick="logout()">Sair</button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="search-container">
+        <input
+          type="text"
+          id="doramaSearch"
+          placeholder="Pesquisar dorama..."
+        />
+        <div id="searchResults"></div>
+      </div>
+      <section id="catalogo"></section>
+      <!-- SUBSTITUA SEU ANTIGO #adminPanel POR ESTE CÓDIGO -->
+      <!-- SUBSTITUA SEU ANTIGO #adminPanel POR ESTE CÓDIGO -->
+      <section id="adminPanel" style="display: none">
+        <!-- Formulário Principal do Dorama -->
+        <div id="doramaFormContainer">
+          <h2>Painel do Administrador</h2>
+          <form id="addDoramaForm">
+            <input type="hidden" id="editId" />
+            <input
+              type="text"
+              id="title"
+              placeholder="Título do Dorama"
+              required
+            />
+            <textarea id="synopsis" placeholder="Sinopse" required></textarea>
+            <input
+              type="text"
+              id="image"
+              placeholder="URL da Imagem do Poster"
+              required
+            />
+            <button type="submit">Salvar Dorama</button>
+          </form>
+        </div>
+
+        <!-- NOVO: Painel para Gerenciar Episódios (só aparece ao editar) -->
+        <div id="episodeAdminPanel" style="display: none; margin-top: 30px">
+          <h3>
+            Gerenciar Episódios para: <span id="editingDoramaTitle"></span>
+          </h3>
+
+          <!-- Formulário para adicionar um novo episódio -->
+          <form id="addEpisodeForm">
+            <h4>Adicionar Novo Episódio</h4>
+            <input
+              type="text"
+              id="epTitle"
+              placeholder="Título do Episódio (Ex: Episódio 1)"
+              required
+            />
+            <input
+              type="text"
+              id="epThumbnail"
+              placeholder="URL da Thumbnail do Episódio"
+              required
+            />
+            <input
+              type="text"
+              id="epUrl"
+              placeholder="URL para Assistir ao Episódio"
+              required
+            />
+            <button type="submit">Adicionar Episódio</button>
+          </form>
+
+          <!-- Lista de episódios existentes -->
+          <div id="currentEpisodesList" style="margin-top: 20px">
+            <h4>Episódios Atuais</h4>
+            <!-- A lista de episódios será inserida aqui pelo JavaScript -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Chopuchai Fansub Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

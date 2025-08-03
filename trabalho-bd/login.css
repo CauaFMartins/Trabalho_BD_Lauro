@@ -1,0 +1,116 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Estilo base do corpo */
+body {
+  background: linear-gradient(135deg, #1a1a2f, #2e1a47);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container para login e registro */
+.login-container,
+.register-container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #ffb6e6;
+  letter-spacing: 1px;
+}
+
+/* Título do cadastro */
+.register-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffb6e6;
+}
+
+/* Inputs */
+form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ffffff33;
+  background-color: #ffffff10;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #ff80d5;
+  background-color: #ffffff20;
+}
+
+/* Botões */
+form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #d55fff, #ff7ecb);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background: linear-gradient(135deg, #c44fe8, #ff5fb5);
+}
+
+/* Texto abaixo do formulário */
+main p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+main a {
+  color: #ffaad4;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+main a:hover {
+  color: #ffffff;
+}
